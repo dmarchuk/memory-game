@@ -2,6 +2,7 @@
   "name": "memory-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dmarchuk.github.io/memory-game/",
   "dependencies": {
     "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^5.1.4",
