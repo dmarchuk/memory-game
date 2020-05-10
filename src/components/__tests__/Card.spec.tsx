@@ -25,34 +25,7 @@ describe('Card component', () => {
     });
 
     describe('handleFlip', () => {
-        it('calls handleFlip on click', () => {
-            const props = {
-                ...baseProps,
-                handleFlip: jest.fn(),
-            };
-            const wrapper = shallow(<Card {...props} />);
-            const element = wrapper.find('[data-test-id="card-container"]').first();
-
-            element.simulate('click');
-
-            expect(props.handleFlip).toHaveBeenCalledTimes(1);
-        });
-
-        it('does not call handleFlip if isClickable is false', () => {
-            const props = {
-                ...baseProps,
-                isClickable: false,
-                handleFlip: jest.fn(),
-            };
-            const wrapper = shallow(<Card {...props} />);
-            const element = wrapper.find('[data-test-id="card-container"]').first();
-
-            element.simulate('click');
-
-            expect(props.handleFlip).not.toHaveBeenCalled();
-        });
-
-        it('calls handleFlip on click with correct parameters', () => {
+        describe('handleFlip successfully called', () => {
             const props = {
                 ...baseProps,
                 handleFlip: jest.fn(),
@@ -63,7 +36,29 @@ describe('Card component', () => {
 
             element.simulate('click', mockedEvent);
 
-            expect(props.handleFlip).toHaveBeenCalledWith(mockedEvent, index, id);
+            it('calls handleFlip on click', () => {
+                expect(props.handleFlip).toHaveBeenCalledTimes(1);
+            });
+
+            it('calls handleFlip on click with correct parameters', () => {
+                expect(props.handleFlip).toHaveBeenCalledWith(mockedEvent, index, id);
+            });
+        });
+
+        describe('handleFlip successfully called', () => {
+            it('does not call handleFlip if isClickable is false', () => {
+                const props = {
+                    ...baseProps,
+                    isClickable: false,
+                    handleFlip: jest.fn(),
+                };
+                const wrapper = shallow(<Card {...props} />);
+                const element = wrapper.find('[data-test-id="card-container"]').first();
+
+                element.simulate('click');
+
+                expect(props.handleFlip).not.toHaveBeenCalled();
+            });
         });
     });
 });
