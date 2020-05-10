@@ -133,6 +133,7 @@ export class Board extends React.Component<BoardProps, BoardState> {
 
                         return (
                             <Card
+                                // Index is ok as 'key' here as we do not re-order the items, otherwise use something more unique
                                 key={index}
                                 id={id}
                                 index={index}
