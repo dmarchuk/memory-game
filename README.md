@@ -2,7 +2,7 @@
 
 Implementation of memory game in React.
 
-#####  [See the demo](https://dmarchuk.github.io/memory-game/)
+### [See the demo](https://dmarchuk.github.io/memory-game/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
