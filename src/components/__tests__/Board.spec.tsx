@@ -7,15 +7,15 @@ import { BoardProps, BoardState } from '../Board/Board';
 
 describe('Board component', () => {
     it('renders the correct amount of cards', () => {
-        const wrapper = mount<BoardProps, BoardState>(<Board numberOfCards={4}/>);
+        const wrapper = mount<BoardProps, BoardState>(<Board numberOfCards={4} resetTimeoutSeconds={RESET_TIMEOUT_SECONDS} />);
         const cards = wrapper.find(Card);
         const numberOfCards = cards.length;
 
         expect(numberOfCards).toBe(8);
     });
 
-    it('has correct random initial coordinates', () => {
-        const wrapper = shallow<Board, BoardProps, BoardState>(<Board numberOfCards={4}/>);
+    it('has correct initial coordinates', () => {
+        const wrapper = shallow<Board, BoardProps, BoardState>(<Board numberOfCards={4} resetTimeoutSeconds={RESET_TIMEOUT_SECONDS} />);
         const state = wrapper.state();
         const sortedCoordinates = state.coordinates.sort();
         const expected = [0, 0, 1, 1, 2, 2, 3, 3];
@@ -25,7 +25,7 @@ describe('Board component', () => {
 
     describe('flipCard', () => {
         describe('click on a first card', () => {
-            const wrapper = mount<BoardProps, BoardState>(<Board numberOfCards={4}/>);
+            const wrapper = mount<BoardProps, BoardState>(<Board numberOfCards={4} resetTimeoutSeconds={RESET_TIMEOUT_SECONDS} />);
             const firstCardElement = wrapper.find('[data-test-id="card-container"]').hostNodes().first();
 
             firstCardElement.simulate('click');
@@ -50,7 +50,7 @@ describe('Board component', () => {
 
     describe('solving the puzzle', () => {
         jest.useFakeTimers();
-        const wrapper = mount<Board, BoardProps, BoardState>(<Board numberOfCards={4}/>);
+        const wrapper = mount<Board, BoardProps, BoardState>(<Board numberOfCards={4} resetTimeoutSeconds={RESET_TIMEOUT_SECONDS} />);
         const { coordinates } = wrapper.state();
         const solvedCardIds = [0, 1, 2];
         const cardIdToSolve = 3;
