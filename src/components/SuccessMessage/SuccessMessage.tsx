@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { RESET_TIMEOUT_SECONDS } from '../../constants';
+import { RESET_TIMEOUT_SECONDS, Color } from '../../constants';
 
 export const SuccessMessage = () => {
     const [timer, setTimer] = useState(RESET_TIMEOUT_SECONDS);
@@ -17,5 +17,5 @@ export const SuccessMessage = () => {
 
 export const SuccessMessageElement = styled.div`
     padding: 16px;
-    color: #4BB543;
+    color: ${Color.Green};
 `;
