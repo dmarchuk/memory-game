@@ -143,7 +143,7 @@ export class Board extends React.Component<BoardProps, BoardState> {
                         );
                     })}
                 </BoardElement>
-                {isSolved ? <SuccessMessage /> : null}
+                {isSolved && <SuccessMessage />}
             </BoardContainerElement>
         );
     }
