@@ -8,7 +8,7 @@ export const App = () => (
         <GlobalStyle />
         <Heading>Memory game</Heading>
         <ContainerElement>
-            <Board numberOfCards={4} resetTimeoutSeconds={RESET_TIMEOUT_SECONDS} />
+            <Board numberOfCards={8} resetTimeoutSeconds={RESET_TIMEOUT_SECONDS} />
         </ContainerElement>
     </div>
 );
