@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { RESET_TIMEOUT_SECONDS } from './constants';
 import { Board, GlobalStyle } from './components';
 
 export const App = () => (
@@ -7,7 +8,7 @@ export const App = () => (
         <GlobalStyle />
         <Heading>Memory game</Heading>
         <ContainerElement>
-            <Board numberOfCards={8} />
+            <Board numberOfCards={4} resetTimeoutSeconds={RESET_TIMEOUT_SECONDS} />
         </ContainerElement>
     </div>
 );

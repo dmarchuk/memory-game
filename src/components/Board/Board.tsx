@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IMAGES_PATH, RESET_TIMEOUT_SECONDS } from '../../constants';
+import { IMAGES_PATH } from '../../constants';
 import { getAllCardNumbers, shuffleArrayOfNumbers } from '../../utils';
 import { Card, SuccessMessage } from '../../components';
 
 export interface BoardProps {
     numberOfCards: number;
+    resetTimeoutSeconds: number;
 }
 
 export interface BoardState {
@@ -87,7 +88,7 @@ export class Board extends React.Component<BoardProps, BoardState> {
         const isSolved = this.props.numberOfCards === solvedCards.length;
 
         if (isSolved) {
-            this.timeoutId = window.setTimeout(this.reset, RESET_TIMEOUT_SECONDS * 1000);
+            this.timeoutId = window.setTimeout(this.reset, this.props.resetTimeoutSeconds * 1000);
         }
 
         if (flippedCardsIndexes.length === 2) {
