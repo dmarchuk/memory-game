@@ -74,6 +74,7 @@ const CardInnerElement = styled.div<CardInnerElementProps>`
     border: 1px solid ${Color.Silver};
     overflow: hidden;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.05);
+    background-color: ${Color.White};
     
     ${props => props.isClickable && `
         cursor: pointer;
