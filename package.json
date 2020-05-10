@@ -21,7 +21,7 @@
   },
   "scripts": {
     "integrate": "yarn lint && yarn test && yarn build",
-    "start": "react-scripts start",
+    "start": "PUBLIC_URL=/ react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
