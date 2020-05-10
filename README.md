@@ -29,6 +29,7 @@ Now you should have a webpack development server running on http://localhost:300
 - [ ] Add button for manual resetting of the board.
 - [ ] Add button for showing all cards - this would probably be needed if there's more cards and user wants to see all cards in the beginning.
 - [ ] Some score measuring.
+- [ ] Take a more thorough look at browser compatibility and whether there are any big issues.
 
 ## Available Scripts
 
