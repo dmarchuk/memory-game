@@ -1,4 +1,34 @@
+# Memory game
+
+Implementation of memory game in React.
+
+#####  [See the demo](https://dmarchuk.github.io/memory-game/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## How to get set up
+```sh
+# Clone the repository
+git clone https://github.com/dmarchuk/memory-game/
+
+# Go to the folder
+cd memory-game
+
+# Install all the dependencies
+yarn install
+
+# Start the development server
+yarn start
+```
+
+Now you should have a webpack development server running on http://localhost:3000.
+
+## Some things that should be finished:
+- [ ] Increase test coverage - especially Board.flipCard() should be more thoroughly tested.
+- [ ] Make the board size configurable in UI (add input).
+- [ ] Add button for manual resetting of the board.
+- [ ] Add button for showing all cards - this would probably be needed if there's more cards and user wants to see all cards in the beginning.
+- [ ] Some score measuring.
 
 ## Available Scripts
 
@@ -66,3 +96,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Author
+
+**Daniel Marchuk**
+
+* Github: [@dmarchuk](https://github.com/dmarchuk)
+* LinkedIn: [@danielmarchuk](https://linkedin.com/in/danielmarchuk)
+
+
+## License
+
+Copyright © 2020 [Daniel Marchuk](https://github.com/dmarchuk).
+
+This project is [MIT](https://github.com/facebook/react/blob/master/LICENSE) licensed.
