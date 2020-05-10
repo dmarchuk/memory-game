@@ -165,7 +165,6 @@ export const BoardElement = styled.div`
     display: grid;
     width: 532px;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: var(4);
     grid-gap: 8px;
 
     &:before {
