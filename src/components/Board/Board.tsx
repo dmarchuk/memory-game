@@ -72,21 +72,21 @@ export class Board extends React.Component<BoardProps, BoardState> {
     }
 
     flipCard = (index: number, id: number) => {
-        let { solvedCards, flippedCardsIndexes, canFlip } = this.state;
+        let flippedCardsIndexes: number[] = [];
+        let solvedCards = [...this.state.solvedCards];
+        let canFlip = true;
 
         const isCorrectChoice = this.isCardCorrectChoice(index, id);
 
         if (isCorrectChoice) {
-            flippedCardsIndexes = [];
             solvedCards = [...solvedCards, id];
         } else if (flippedCardsIndexes.length <= 2) {
-            flippedCardsIndexes = [...flippedCardsIndexes, index];
+            flippedCardsIndexes = [...this.state.flippedCardsIndexes, index];
         }
 
         const isSolved = this.props.numberOfCards === solvedCards.length;
 
         if (isSolved) {
-            flippedCardsIndexes = [];
             this.timeoutId = window.setTimeout(this.reset, RESET_TIMEOUT_SECONDS * 1000);
         }
 
