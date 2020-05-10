@@ -7,7 +7,7 @@ import { BoardProps, BoardState } from '../Board/Board';
 
 describe('Board component', () => {
     it('renders the correct amount of cards', () => {
-        const wrapper = mount<BoardProps, BoardState>(<Board numberOfCards={4} resetTimeoutSeconds={RESET_TIMEOUT_SECONDS} />);
+        const wrapper = shallow<BoardProps, BoardState>(<Board numberOfCards={4} resetTimeoutSeconds={RESET_TIMEOUT_SECONDS} />);
         const cards = wrapper.find(Card);
         const numberOfCards = cards.length;
 
