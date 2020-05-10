@@ -4,11 +4,11 @@ import { IMAGES_PATH, RESET_TIMEOUT_SECONDS } from '../../constants';
 import { getAllCardNumbers, shuffleArrayOfNumbers } from '../../utils';
 import { Card, SuccessMessage } from '../../components';
 
-interface BoardProps {
+export interface BoardProps {
     numberOfCards: number;
 }
 
-interface BoardState {
+export interface BoardState {
     coordinates: number[];
     flippedCardsIndexes: number[];
     solvedCards: number[];
