@@ -7,7 +7,13 @@ export const SuccessMessage = () => {
 
     useEffect(() => {
         const interval = window.setInterval(() => {
-            setTimer(secondsLeft => secondsLeft - 1);
+            setTimer(secondsLeft => {
+                if (secondsLeft === 1) {
+                    window.clearInterval(interval);
+                }
+
+                return secondsLeft - 1;
+            });
         }, 1000);
         return () => window.clearInterval(interval);
     }, []);
